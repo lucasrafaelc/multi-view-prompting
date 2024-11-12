@@ -1,0 +1,1 @@
+- arquivo const.py => ADD combinações para cada dataset
