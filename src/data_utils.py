@@ -238,7 +238,7 @@ def parse_aste_tuple(_tuple, sent):
         ot = ' '.join(sent[start_idx:end_idx + 1])
         res = [at, ot, _tuple[2]]
     else:
-        print(_tuple)
+        #print(_tuple)
         raise NotImplementedError
     return res
 
@@ -254,7 +254,7 @@ def get_task_tuple(_tuple, task):
         at, ac, sp, ot = _tuple
     elif task == "ssa":
         ac, at, ot, sp = _tuple
-        print(f"--> ac:{ac}, at:{at}, ot:{ot}, sp:{sp}")
+        #print(f"--> ac:{ac}, at:{at}, ot:{ot}, sp:{sp}")
     else:
         raise NotImplementedError
 
@@ -334,13 +334,13 @@ def get_para_targets(sents, labels, data_name, data_type, top_k, task, args):
             at, ac, sp, ot = get_task_tuple(_tuple, task)
             if task == "ssa":
                 element_dict = {"[H]": ac, "[A]": at, "[O]": ot, "[P]": sp}
-                print(element_dict)
+                #print(element_dict)
             else:
                 element_dict = {"[A]": at, "[O]": ot, "[C]": ac, "[S]": sp}
             token_end = 3
 
             element_list = []
-            print(optim_orders, "~~~~")
+            #print(optim_orders, "~~~~")
             for key in optim_orders[0].split(" "):
                 element_list.append("{} {}".format(key, element_dict[key]))
 
