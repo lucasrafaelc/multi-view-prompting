@@ -188,7 +188,11 @@ def choose_best_order_global(sents, labels, model, tokenizer, device, task):
 
             at, ac, sp, ot = get_task_tuple(_tuple, task)
 
-            element_dict = {"[A]": at, "[O]": ot, "[C]": ac, "[S]": sp}
+            if task == "ssa":
+                element_dict = {"[H]": ac, "[A]": at, "[O]": ot, "[P]": sp}
+                #print(element_dict)
+            else:
+                element_dict = {"[A]": at, "[O]": ot, "[C]": ac, "[S]": sp}
             element_list = []
             for key in q:
                 element_list.append("{} {}".format(key, element_dict[key]))
@@ -388,7 +392,11 @@ def get_para_targets_dev(sents, labels, data_name, task, args):
 
             at, ac, sp, ot = get_task_tuple(_tuple, task)
 
-            element_dict = {"[A]": at, "[O]": ot, "[C]": ac, "[S]": sp}
+            if task == "ssa":
+                element_dict = {"[H]": ac, "[A]": at, "[O]": ot, "[P]": sp}
+                #print(element_dict)
+            else:
+                element_dict = {"[A]": at, "[O]": ot, "[C]": ac, "[S]": sp}
             element_list = []
             for key in top_order:
                 element_list.append("{} {}".format(key, element_dict[key]))
