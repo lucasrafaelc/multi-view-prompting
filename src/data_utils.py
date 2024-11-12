@@ -20,6 +20,7 @@ def get_element_tokens(task):
         ["[A]", "[O]", "[C]", "[S]"],
         "asqp":
             ["[A]", "[O]", "[C]", "[S]"],
+        "ssa": ["[H]", "[A]", "[O]", "[P]"]
     }
     return dic[task]
 
