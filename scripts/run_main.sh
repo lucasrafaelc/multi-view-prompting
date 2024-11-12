@@ -7,7 +7,7 @@ TASK_DATA[asqp]="rest15 rest16"
 TASK_DATA[acos]="laptop16 rest16"
 TASK_DATA[aste]="laptop14"
 TASK_DATA[tasd]="rest15 rest16"
-TASK_DATA[ssa]="norec multibooked_ca multibooked_eu opener_es opener_en mpqa darmstadt_unis"
+TASK_DATA[ssa]="mpqa" #norec multibooked_ca multibooked_eu opener_es opener_en mpqa darmstadt_unis
 cd src
 
 # for SVP_TYPE in heuristic rand rank 
