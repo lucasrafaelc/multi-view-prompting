@@ -17,7 +17,8 @@ for DATA in ${TASK_DATA[${TASK}]}
 do
 for DATA_RATIO in 1.0
 do
-for SEED in 5 10 15 20 25
+#for SEED in 5 10 15 20 25
+for SEED in 5
 do
 for K in 5
 # for K in 3 7 15
