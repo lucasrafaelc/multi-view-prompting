@@ -38,7 +38,6 @@ def get_orders(task, data, args, sents, labels):
     #                                         args.task)
 
     if args.single_view_type == 'rank':
-        print(optim_orders_all)
         orders = optim_orders_all[task][data]
     elif args.single_view_type == 'rand':
         orders = [random.Random(args.seed).choice(
