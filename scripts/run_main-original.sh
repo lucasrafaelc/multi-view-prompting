@@ -3,7 +3,7 @@ set -ex
 export CUDA_VISIBLE_DEVICES=0
 
 declare -A TASK_DATA
-TASK_DATA[asqp]="mpqa"
+TASK_DATA[asqp]="rest15 rest16"
 TASK_DATA[acos]="laptop16 rest16"
 TASK_DATA[aste]="laptop14"
 TASK_DATA[tasd]="rest15 rest16"
@@ -11,7 +11,7 @@ TASK_DATA[ssa]="mpqa" #norec multibooked_ca multibooked_eu opener_es opener_en m
 cd src
 
 # for SVP_TYPE in heuristic rand rank 
-for TASK in asqp
+for TASK in ssa
 do
 for DATA in ${TASK_DATA[${TASK}]}
 do

@@ -55,7 +55,8 @@ def cria_dataset(dataset_name):
                     a = extrai_expressao(contexto,tupla["Target"])
                     o = extrai_expressao(contexto,tupla["Polar_expression"])
                     p = tupla["Polarity"]
-                    grupo_tuplas.append([h,a,o,p])
+                    #grupo_tuplas.append([h,a,o,p])
+                    grupo_tuplas.append([a,h,p,o])
                         
                 
                 if len(grupo_tuplas) != 0:
@@ -69,3 +70,4 @@ if __name__ == "__main__":
     
     for dataset in dataset_list:
         cria_dataset(dataset)
+    print("Done!")

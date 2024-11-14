@@ -55,7 +55,7 @@ def init_args():
     parser.add_argument(
         "--task",
         default='asqp',
-        choices=["asqp", "acos", "aste", "tasd", "unified", "unified3", "ssa"],
+        choices=["asqp", "acos", "aste", "tasd", "unified", "unified3"],
         type=str,
         help="The name of the task, selected from: [asqp, tasd, aste]")
     parser.add_argument(
@@ -557,8 +557,6 @@ def evaluate(model, task, data, data_type):
                     elif tasks[i] in ["asqp", "acos"]:
                         output.append(f"[A] {at} [O] {ot} [S] {sp} [C] {ac}")
 
-                    elif tasks[i] == "ssa":
-                        output.append(f"[H]{ac} [A] {at} [O] {ot} [P] {sp}")
                     else:
                         raise NotImplementedError
 
