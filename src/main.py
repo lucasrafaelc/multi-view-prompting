@@ -557,6 +557,8 @@ def evaluate(model, task, data, data_type):
                     elif tasks[i] in ["asqp", "acos"]:
                         output.append(f"[A] {at} [O] {ot} [S] {sp} [C] {ac}")
 
+                    elif tasks[i] == "ssa":
+                        output.append(f"[H]{ac} [A] {at} [O] {ot} [P] {sp}")
                     else:
                         raise NotImplementedError
 
