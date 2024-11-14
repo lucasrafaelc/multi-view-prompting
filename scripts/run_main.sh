@@ -29,13 +29,14 @@ OUT_DIR="../outputs/$TASK/${DATA}/top${K}_${CTRL_TOKEN}_data${DATA_RATIO}"
 
 mkdir -p $OUT_DIR
 
-
+#--num_train_epochs 20 \
+    
 python main.py \
     --data_path "../data/" \
     --dataset $DATA \
     --model_name_or_path t5-base \
     --output_dir $OUT_DIR \
-    --num_train_epochs 20 \
+    --num_train_epochs 5 \
     --save_top_k 0 \
     --task $TASK \
     --top_k $K \
